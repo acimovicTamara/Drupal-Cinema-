@@ -9,13 +9,13 @@ class MovieReservationController  {
       $movies = [
         ['title' => 'Movie1'],
         ['title' => 'Movie2'],
-        ['title' => 'Movie3']
+        ['title' => 'Movie3'],
       ];
   
       return [
-        '#theme' => 'movie_reservation',
+        '#theme' => 'movies-list',
         '#movies' => $movies,
-        '#title' => 'All students'
+        '#title' => 'Drupal <3'
       ]; 
     }
   }

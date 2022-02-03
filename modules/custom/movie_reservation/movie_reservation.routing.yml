@@ -1,4 +1,4 @@
-movie_reservation.my_page:
+movie_reservation.myPage:
   path: '/movie-reservation'
   defaults:
     _controller: '\Drupal\movie_reservation\Controller\MovieReservationController::myPage'
