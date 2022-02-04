@@ -5,7 +5,7 @@ namespace Drupal\movie_reservation\Controller;
 
 class MovieReservationController  {
 
-    public function myPage(){
+    public function showMovie() {
       $movies = [
         ['title' => 'Movie1'],
         ['title' => 'Movie2'],
@@ -15,7 +15,7 @@ class MovieReservationController  {
       return [
         '#theme' => 'movies-list',
         '#movies' => $movies,
-        '#title' => 'Drupal <3'
+        '#title' => 'Movies'
       ]; 
     }
   }
