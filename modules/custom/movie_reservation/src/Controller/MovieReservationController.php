@@ -6,16 +6,21 @@ namespace Drupal\movie_reservation\Controller;
 class MovieReservationController  {
 
     public function showMovie() {
-      $movies = [
-        ['title' => 'Movie1'],
-        ['title' => 'Movie2'],
-        ['title' => 'Movie3'],
-      ];
-  
-      return [
-        '#theme' => 'movies-list',
-        '#movies' => $movies,
-        '#title' => 'Movies'
-      ]; 
+      $query = \Drupal::entityQuery('node')
+        ->condition('type', 'movie');
+        
+
+      $movies = \Drupal\node\Entity\Node::loadMultiple($query->execute());
+      
+      $x=1;
+      
+      
+
+        return array(
+          '#theme' => 'movies-list',
+          '#movies' => $movies,
+          '#title' => 'Welcome to our movie reservation page'
+        );
+      
     }
   }
