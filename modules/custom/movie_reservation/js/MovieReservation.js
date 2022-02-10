@@ -1,7 +1,6 @@
 function genre(){
     $("#genre").on("change", function () {
-        const genre = $(this).val();
-        $('#genre').val(genre);
+     const genre = $(this).val();
         $.ajax({
             method: "GET",
             url: "/movie-reservation?genre=" + $("#genre").val(),
