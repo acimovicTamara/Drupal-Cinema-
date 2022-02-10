@@ -3,3 +3,5 @@ description: This module shows basic info on movies
 type: module
 core_version_requirement: ^8 || ^9
 package: custom
+libraries:
+  - movie_reservation/movie_reservation
